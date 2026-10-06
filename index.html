@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ShortForge — Long Video to Shorts</title>
+  <meta name="description" content="Turn long videos into vertical Shorts quickly.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="bg-orb orb-a"></div><div class="bg-orb orb-b"></div>
+  <header class="nav">
+    <div class="brand"><span class="logo">S</span><span>ShortForge</span></div>
+    <span class="pill">AI Shorts Maker</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">LONG VIDEO → SHORTS</div>
+      <h1>একটা লং ভিডিও থেকে<br><span>একাধিক Shorts</span></h1>
+      <p>ভিডিও আপলোড করুন, ক্লিপ সংখ্যা ও দৈর্ঘ্য বেছে নিন—তারপর 9:16 vertical Shorts তৈরি করুন।</p>
+    </section>
+
+    <section class="card">
+      <form id="form">
+        <label class="dropzone" id="dropzone">
+          <input id="video" name="video" type="file" accept="video/*" hidden>
+          <div class="upload-icon">↑</div>
+          <strong id="fileTitle">ভিডিও এখানে টেনে আনুন</strong>
+          <span id="fileSub">অথবা ক্লিক করে MP4/MOV/WebM বেছে নিন</span>
+        </label>
+
+        <div class="grid">
+          <div class="field">
+            <label>কতটি Shorts?</label>
+            <select name="count" id="count">
+              <option value="3">3 Shorts</option>
+              <option value="5" selected>5 Shorts</option>
+              <option value="7">7 Shorts</option>
+              <option value="10">10 Shorts</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>প্রতি Short</label>
+            <select name="duration" id="duration">
+              <option value="15">15 seconds</option>
+              <option value="30" selected>30 seconds</option>
+              <option value="45">45 seconds</option>
+              <option value="60">60 seconds</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="features">
+          <div><span>✓</span> 9:16 vertical</div>
+          <div><span>✓</span> 1080×1920 output</div>
+          <div><span>✓</span> MP4 download</div>
+          <div><span>✓</span> Mobile friendly</div>
+        </div>
+
+        <button class="primary" id="submitBtn" type="submit">
+          <span>✦</span> Shorts বানান
+        </button>
+
+        <div class="progress hidden" id="progress">
+          <div class="progress-head"><span id="status">ভিডিও প্রসেস হচ্ছে…</span><span id="percent">0%</span></div>
+          <div class="bar"><i id="bar"></i></div>
+          <small>বড় ভিডিও হলে কিছুটা সময় লাগতে পারে। এই পেজটি খোলা রাখুন।</small>
+        </div>
+        <div class="error hidden" id="error"></div>
+      </form>
+    </section>
+
+    <section class="results hidden" id="results">
+      <div class="section-head">
+        <div><div class="eyebrow">READY</div><h2>Your Shorts</h2></div>
+        <button class="ghost" id="newBtn">নতুন ভিডিও</button>
+      </div>
+      <div class="result-grid" id="resultGrid"></div>
+    </section>
+
+    <section class="info">
+      <div class="info-card"><b>01</b><h3>Upload</h3><p>আপনার নিজের long-form video দিন।</p></div>
+      <div class="info-card"><b>02</b><h3>Choose</h3><p>কতটি Short এবং কত সেকেন্ড হবে ঠিক করুন।</p></div>
+      <div class="info-card"><b>03</b><h3>Download</h3><p>Vertical MP4 Shorts ডাউনলোড করুন।</p></div>
+    </section>
+
+    <footer>ShortForge • Built for fast vertical video creation</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
